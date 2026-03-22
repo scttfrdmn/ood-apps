@@ -1,0 +1,35 @@
+---
+cluster: "aws-emr"
+form:
+  - job_name
+  - entry_point
+  - entry_point_args
+  - spark_submit_parameters
+  - execution_role_arn
+  - instance_count
+attributes:
+  job_name:
+    label: "Job Name"
+    value: "ood-emr-job"
+  entry_point:
+    label: "Entry Point (S3 URI)"
+    value: "s3://my-bucket/scripts/my_spark_job.py"
+    help: "S3 URI of the PySpark or Scala script"
+  entry_point_args:
+    label: "Entry Point Arguments"
+    value: ""
+    help: "Space-separated arguments passed to the script"
+  spark_submit_parameters:
+    label: "Spark Submit Parameters"
+    value: "--conf spark.executor.cores=4"
+    help: "Additional --conf flags for spark-submit"
+  execution_role_arn:
+    label: "Execution Role ARN"
+    value: ""
+    help: "IAM role that EMR Serverless assumes (emr-serverless.amazonaws.com trusted)"
+  instance_count:
+    widget: number_field
+    label: "Max Executors"
+    value: 4
+    min: 1
+    max: 100

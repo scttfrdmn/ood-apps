@@ -1,0 +1,20 @@
+---
+cluster: "aws-stepfunctions"
+form:
+  - job_name
+  - state_machine_arn
+  - input_json
+attributes:
+  job_name:
+    label: "Execution Name"
+    value: "ood-sfn-run"
+    help: "Unique name for this execution (used as the Step Functions execution name)"
+  state_machine_arn:
+    label: "State Machine ARN"
+    value: ""
+    help: "ARN of the Step Functions state machine to execute"
+  input_json:
+    widget: text_area
+    label: "Input (JSON)"
+    value: "{}"
+    help: "JSON document passed as input to the state machine"

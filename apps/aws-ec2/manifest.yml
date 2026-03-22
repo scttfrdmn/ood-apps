@@ -1,0 +1,7 @@
+---
+name: "AWS EC2 Compute"
+category: "AWS Compute"
+subcategory: "Virtual Machine"
+role: "batch_connect"
+description: "Launch an EC2 instance as a compute node via the OOD adapter."
+icon: "fas fa-server"

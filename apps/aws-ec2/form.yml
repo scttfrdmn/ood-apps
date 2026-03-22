@@ -1,0 +1,37 @@
+---
+cluster: "aws-ec2"
+form:
+  - job_name
+  - script_body
+  - instance_type
+  - walltime
+  - bc_email_on_started
+attributes:
+  job_name:
+    label: "Job Name"
+    value: "ood-ec2-job"
+  script_body:
+    widget: text_area
+    label: "Job Script"
+    value: |
+      #!/bin/bash
+      echo "Hello from EC2"
+    help: "Script to run on the EC2 instance"
+  instance_type:
+    label: "Instance Type"
+    widget: select
+    options:
+      - ["c6i.xlarge (4 vCPU, 8 GB)", "c6i.xlarge"]
+      - ["c6i.4xlarge (16 vCPU, 32 GB)", "c6i.4xlarge"]
+      - ["m6i.xlarge (4 vCPU, 16 GB)", "m6i.xlarge"]
+      - ["m6i.4xlarge (16 vCPU, 64 GB)", "m6i.4xlarge"]
+      - ["r6i.xlarge (4 vCPU, 32 GB)", "r6i.xlarge"]
+      - ["hpc6a.48xlarge (96 vCPU, 384 GB)", "hpc6a.48xlarge"]
+    value: "c6i.xlarge"
+  walltime:
+    label: "Walltime (HH:MM:SS)"
+    value: "04:00:00"
+  bc_email_on_started:
+    widget: check_box
+    label: "Email when job starts"
+    value: 0

@@ -1,0 +1,36 @@
+---
+cluster: "aws-fargate"
+form:
+  - job_name
+  - script_body
+  - cpu
+  - memory
+attributes:
+  job_name:
+    label: "Task Name"
+    value: "ood-fargate-task"
+  script_body:
+    widget: text_area
+    label: "Command Override"
+    value: "echo hello from Fargate"
+    help: "Shell command to run in the container (overrides container CMD)"
+  cpu:
+    label: "vCPU"
+    widget: select
+    options:
+      - ["0.25 vCPU", "256"]
+      - ["0.5 vCPU", "512"]
+      - ["1 vCPU", "1024"]
+      - ["2 vCPU", "2048"]
+      - ["4 vCPU", "4096"]
+    value: "1024"
+  memory:
+    label: "Memory (MB)"
+    widget: select
+    options:
+      - ["512 MB", "512"]
+      - ["1 GB", "1024"]
+      - ["2 GB", "2048"]
+      - ["4 GB", "4096"]
+      - ["8 GB", "8192"]
+    value: "2048"

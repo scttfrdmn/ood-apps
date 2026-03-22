@@ -1,0 +1,7 @@
+---
+name: "AWS Batch"
+category: "AWS Compute"
+subcategory: "Batch"
+role: "batch_connect"
+description: "Submit a containerized job to AWS Batch via the OOD adapter."
+icon: "fas fa-layer-group"

@@ -1,0 +1,7 @@
+---
+name: "Amazon EMR Serverless"
+category: "AWS Compute"
+subcategory: "Big Data"
+role: "batch_connect"
+description: "Run a Spark job on Amazon EMR Serverless."
+icon: "fas fa-fire"

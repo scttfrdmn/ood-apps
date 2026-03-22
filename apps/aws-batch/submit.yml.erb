@@ -1,0 +1,8 @@
+---
+script:
+  content: |
+    <%- if defined?(script_body) && !script_body.empty? -%>
+    <%= script_body %>
+    <%- else -%>
+    # No script body provided
+    <%- end -%>

@@ -1,0 +1,38 @@
+---
+cluster: "aws-omics"
+form:
+  - job_name
+  - workflow_id
+  - workflow_type
+  - output_uri
+  - role_arn
+  - storage_capacity
+attributes:
+  job_name:
+    label: "Run Name"
+    value: "ood-omics-run"
+  workflow_id:
+    label: "Workflow ID"
+    help: "HealthOmics workflow ID (e.g. 1234567)"
+  workflow_type:
+    label: "Workflow Type"
+    widget: select
+    options:
+      - ["Private", "PRIVATE"]
+      - ["Ready2Run", "READY2RUN"]
+    value: "PRIVATE"
+  output_uri:
+    label: "Output S3 URI"
+    value: "s3://my-bucket/omics-output/"
+    help: "S3 URI prefix for workflow output (must end with /)"
+  role_arn:
+    label: "Execution Role ARN"
+    value: ""
+    help: "IAM role ARN for HealthOmics to assume (omics.amazonaws.com trusted)"
+  storage_capacity:
+    widget: number_field
+    label: "Storage Capacity (GB)"
+    value: 100
+    min: 0
+    max: 9600
+    help: "0 = use HealthOmics default"

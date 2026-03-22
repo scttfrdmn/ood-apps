@@ -1,0 +1,7 @@
+---
+name: "AWS HealthOmics"
+category: "AWS Compute"
+subcategory: "Genomics"
+role: "batch_connect"
+description: "Run a WDL or Nextflow genomics workflow via AWS HealthOmics."
+icon: "fas fa-dna"

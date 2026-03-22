@@ -1,0 +1,26 @@
+---
+cluster: "aws-sagemaker"
+form:
+  - job_name
+  - app_type
+  - instance_type
+attributes:
+  job_name:
+    label: "Session Name"
+    value: "ood-sagemaker-session"
+  app_type:
+    label: "App Type"
+    widget: select
+    options:
+      - ["JupyterServer", "JupyterServer"]
+      - ["KernelGateway", "KernelGateway"]
+    value: "JupyterServer"
+  instance_type:
+    label: "Instance Type"
+    widget: select
+    options:
+      - ["ml.t3.medium (2 vCPU, 4 GB)", "ml.t3.medium"]
+      - ["ml.m5.xlarge (4 vCPU, 16 GB)", "ml.m5.xlarge"]
+      - ["ml.m5.4xlarge (16 vCPU, 64 GB)", "ml.m5.4xlarge"]
+      - ["ml.g4dn.xlarge (4 vCPU, 16 GB, 1 GPU)", "ml.g4dn.xlarge"]
+    value: "ml.t3.medium"

@@ -1,0 +1,47 @@
+---
+cluster: "aws-batch"
+form:
+  - job_name
+  - script_body
+  - queue
+  - walltime
+  - num_cores
+  - memory_gb
+  - bc_email_on_started
+attributes:
+  job_name:
+    label: "Job Name"
+    value: "ood-batch-job"
+    help: "A short name for this job (no spaces)"
+  script_body:
+    widget: text_area
+    label: "Job Script"
+    value: |
+      #!/bin/bash
+      echo "Hello from AWS Batch"
+      echo "Running on $(hostname)"
+    help: "Bash script to execute inside the container"
+  queue:
+    label: "Batch Job Queue"
+    value: ""
+    help: "Leave blank to use the cluster default queue"
+  walltime:
+    label: "Walltime (HH:MM:SS)"
+    value: "01:00:00"
+    help: "Maximum runtime"
+  num_cores:
+    widget: number_field
+    label: "vCPUs"
+    value: 2
+    min: 1
+    max: 96
+  memory_gb:
+    widget: number_field
+    label: "Memory (GB)"
+    value: 4
+    min: 1
+    max: 384
+  bc_email_on_started:
+    widget: check_box
+    label: "Email when job starts"
+    value: 0

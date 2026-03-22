@@ -1,0 +1,7 @@
+---
+name: "AWS Fargate"
+category: "AWS Compute"
+subcategory: "Container"
+role: "batch_connect"
+description: "Run a Docker container workload on AWS Fargate (ECS)."
+icon: "fab fa-docker"

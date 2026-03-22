@@ -1,0 +1,7 @@
+---
+name: "AWS SageMaker Training"
+category: "AWS Compute"
+subcategory: "ML Training"
+role: "batch_connect"
+description: "Run a distributed ML training job on SageMaker Training instances."
+icon: "fas fa-graduation-cap"

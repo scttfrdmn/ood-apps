@@ -1,0 +1,7 @@
+---
+name: "AWS Step Functions"
+category: "AWS Compute"
+subcategory: "Workflow"
+role: "batch_connect"
+description: "Execute a multi-step orchestrated workflow via AWS Step Functions."
+icon: "fas fa-project-diagram"

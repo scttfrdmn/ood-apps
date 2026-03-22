@@ -1,0 +1,7 @@
+---
+name: "AWS SageMaker Studio"
+category: "AWS Compute"
+subcategory: "Interactive"
+role: "batch_connect"
+description: "Launch a SageMaker Studio app via the OOD adapter."
+icon: "fas fa-brain"
