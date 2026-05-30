@@ -1,0 +1,7 @@
+---
+name: "AWS Braket"
+category: "AWS Compute"
+subcategory: "Quantum"
+role: "batch_connect"
+description: "Submit a quantum task (OpenQASM 3.0 / Braket IR circuit) to an Amazon Braket QPU or managed simulator."
+icon: "fas fa-atom"

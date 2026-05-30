@@ -1,0 +1,36 @@
+---
+cluster: "aws-braket"
+form:
+  - job_name
+  - device
+  - circuit
+  - shots
+  - output_bucket
+attributes:
+  job_name:
+    label: "Task Name"
+    value: "ood-braket-task"
+    help: "Name for this quantum task"
+  device:
+    label: "Device ARN"
+    value: "arn:aws:braket:::device/quantum-simulator/amazon/sv1"
+    help: "QPU or managed simulator device ARN (default: SV1 state-vector simulator)"
+  circuit:
+    widget: text_area
+    label: "Circuit (OpenQASM 3.0)"
+    value: |
+      OPENQASM 3.0;
+      qubit[2] q;
+      bit[2] c;
+      h q[0];
+      cnot q[0], q[1];
+      c = measure q;
+    help: "OpenQASM 3.0 or Braket IR circuit to execute"
+  shots:
+    label: "Shots"
+    value: "100"
+    help: "Number of measurement shots"
+  output_bucket:
+    label: "Results S3 Bucket"
+    value: ""
+    help: "S3 bucket (ood-* prefix) where Braket writes task results"
