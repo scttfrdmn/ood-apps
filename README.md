@@ -1,5 +1,8 @@
 # ood-apps
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![OOD app bundles](https://img.shields.io/badge/Open%20OnDemand-app%20bundles-1f6feb.svg)](https://openondemand.org/)
+
 Open OnDemand (OOD) application bundles for the [aws-openondemand](https://github.com/scttfrdmn/aws-openondemand) ecosystem. Each app provides a web UI form that researchers use to submit jobs to one of the 8 AWS compute adapters.
 
 ## Apps
