@@ -1,0 +1,36 @@
+---
+cluster: "aws-bedrock"
+form:
+  - job_name
+  - model_id
+  - input_s3
+  - output_s3
+  - role_arn
+attributes:
+  job_name:
+    label: "Job Name"
+    value: "ood-bedrock-batch"
+    help: "Name for this Bedrock batch model-invocation job"
+  model_id:
+    widget: select
+    label: "Foundation Model"
+    options:
+      - ["Claude 3.5 Sonnet v2", "anthropic.claude-3-5-sonnet-20241022-v2:0"]
+      - ["Claude 3.5 Haiku", "anthropic.claude-3-5-haiku-20241022-v1:0"]
+      - ["Claude 3 Opus", "anthropic.claude-3-opus-20240229-v1:0"]
+      - ["Llama 3.1 70B Instruct", "meta.llama3-1-70b-instruct-v1:0"]
+      - ["Titan Text Embeddings v2", "amazon.titan-embed-text-v2:0"]
+      - ["Mistral Large 2", "mistral.mistral-large-2407-v1:0"]
+    help: "Bedrock foundation model to run inference with"
+  input_s3:
+    label: "Input Manifest (S3 URI)"
+    value: ""
+    help: "s3://bucket/input-manifest.jsonl — one {\"recordId\",\"modelInput\"} record per line"
+  output_s3:
+    label: "Output Prefix (S3 URI)"
+    value: ""
+    help: "s3://bucket/output-prefix/ — where Bedrock writes per-record results"
+  role_arn:
+    label: "Service Role ARN"
+    value: ""
+    help: "IAM role Bedrock assumes to read the input manifest and write results"

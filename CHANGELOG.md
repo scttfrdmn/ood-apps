@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- `apps/aws-bedrock`: app bundle for the AWS Bedrock batch-inference adapter (form fields:
+  job name, foundation model dropdown, input S3 manifest, output S3 prefix, service role
+  ARN). Completes the ood-apps side of aws-openondemand#11.
+
 ## [0.1.0] - 2026-05-30
 
 ### Added

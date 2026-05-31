@@ -1,0 +1,7 @@
+---
+name: "AWS Bedrock"
+category: "AWS Compute"
+subcategory: "Inference"
+role: "batch_connect"
+description: "Run a Bedrock batch model-invocation job over an S3 JSONL manifest — large-scale foundation-model inference (evaluation, annotation, embeddings) with results written to S3."
+icon: "fas fa-robot"
