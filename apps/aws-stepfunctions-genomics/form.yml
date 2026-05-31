@@ -1,0 +1,34 @@
+---
+cluster: "aws-stepfunctions"
+form:
+  - job_name
+  - state_machine_arn
+  - input_s3
+  - output_s3
+  - align_workflow_id
+  - variant_job_definition
+attributes:
+  job_name:
+    label: "Execution Name"
+    value: "ood-genomics-run"
+    help: "Unique name for this Step Functions execution"
+  state_machine_arn:
+    label: "State Machine ARN"
+    value: ""
+    help: "ARN of the deployed ood-genomics-pipeline state machine (see examples/state-machines)"
+  input_s3:
+    label: "Input reads (S3 URI)"
+    value: ""
+    help: "s3://bucket/raw-reads/ — raw sequence reads to preprocess"
+  output_s3:
+    label: "Output prefix (S3 URI)"
+    value: ""
+    help: "s3://bucket/results/ — where annotated variants are written"
+  align_workflow_id:
+    label: "HealthOmics Workflow ID"
+    value: ""
+    help: "HealthOmics workflow used by the align stage"
+  variant_job_definition:
+    label: "Variant-call Batch Job Definition"
+    value: ""
+    help: "AWS Batch job definition ARN/name for the GPU variant-calling stage"

@@ -1,0 +1,7 @@
+---
+name: "Genomics Pipeline (Step Functions)"
+category: "AWS Compute"
+subcategory: "Workflow"
+role: "batch_connect"
+description: "Run the multi-stage genomics secondary-analysis pipeline (preprocess → align → variant-call → annotate) as one Step Functions execution. Deploy the ood-genomics-pipeline state machine first (see aws-openondemand examples/state-machines)."
+icon: "fas fa-dna"
